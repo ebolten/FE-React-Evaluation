@@ -106,8 +106,8 @@
 .nav-divider {
   color:white;
 }
-/* entire homepage */
-#homepage {
+/* pages */
+#homepage,#skills-div,#interests-div,#interest-details,#skill-details {
   padding:50px;
 }
 /* welcome, user on homepage */
@@ -180,8 +180,4 @@
   background-color:darkmagenta;
   padding:5px;
   color:white;
-}
-/* interests and skills pages */
-#skills-div,#interests-div {
-  padding:50px;
 }
