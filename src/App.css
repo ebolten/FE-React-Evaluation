@@ -86,6 +86,7 @@
   transition:.5s;
   color:#ED8643;
   text-decoration:none;
+  cursor:pointer
 }
 .nav-item-active {
   padding:25px;

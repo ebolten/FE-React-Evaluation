@@ -25,14 +25,14 @@ function App() {
             <Login updateUsername={updateUsername} history={history}/>
           </Route>
           <Route exact path="/home">
-            <Navbar store={store} history={history}/>
+            <Navbar deleteUsername={deleteUsername} store={store} history={history}/>
             <Home store={store}/>
           </Route>
           <Route path="/interests">
-            <Navbar store={store} history={history}/>
+            <Navbar deleteUsername={deleteUsername} store={store} history={history}/>
           </Route>
           <Route path="/skills">
-            <Navbar store={store} history={history}/>
+            <Navbar deleteUsername={deleteUsername} store={store} history={history}/>
           </Route>
         </Switch>
     </div>
@@ -42,6 +42,11 @@ function App() {
 // update username (for login page)
 function updateUsername(new_username) {
   store.dispatch({type:"UPDATE_USERNAME",new_username:new_username});
+}
+
+// delete username (for logout)
+function deleteUsername() {
+  store.dispatch({type:"UPDATE_USERNAME",new_username:""});
 }
 
 export default App;
