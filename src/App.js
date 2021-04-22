@@ -3,7 +3,7 @@ import React from 'react';
 import {createStore} from 'redux'
 import reducer from './reducers/index.js';
 import './App.css';
-import {Route,Switch} from 'react-router-dom';
+import {Route,Switch,useHistory} from 'react-router-dom';
 import {fakeInterests, fakeSkills} from "./dummy-data";
 import Login from './Components/login.js';
 import Navbar from './Components/navbar.js';
@@ -14,6 +14,7 @@ const store = createStore(reducer)
 
 // main app component
 function App() {
+    const history = useHistory();
     console.log(store.getState())
     console.log('test return', fakeInterests);
     console.log('test return', fakeSkills);
@@ -21,11 +22,11 @@ function App() {
     <div className="App">
         <Switch>
           <Route exact path='/'>
-            <Login updateUsername={updateUsername}/>
+            <Login updateUsername={updateUsername} history={history}/>
           </Route>
           <Route exact path="/home">
-            <Navbar username={store.getState().user.userName}/>
-            <Home username={store.getState().user.userName}/>
+            <Navbar store={store}/>
+            <Home store={store}/>
           </Route>
         </Switch>
     </div>

@@ -31,6 +31,7 @@ function onSubmit(event,props) {
     event.preventDefault();
     let username = document.getElementById('username').value;
     props.updateUsername(username);
+    props.history.push("/home");
 }
 
 export default Login;

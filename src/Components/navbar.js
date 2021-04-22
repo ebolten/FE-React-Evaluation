@@ -5,7 +5,7 @@ function Navbar(props) {
         <div id="navbar">
             <a href="/home">Home</a>
             <a href="/">Login</a>
-            Welcome, {props.username}
+            Welcome, {props.store.getState().user.userName}
         </div>
     )
 }
