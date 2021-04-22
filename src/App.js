@@ -41,6 +41,15 @@ function App() {
 
 // update username (for login page)
 function updateUsername(new_username) {
+  // make http request to server
+  fetch("http://localhost:3000/")
+  .then(resp=>resp)
+  .then(data=>{
+    // update the state with new interests and skills data
+    store.dispatch({type:"UPDATE_INTERESTS",new_interests:fakeInterests})
+    store.dispatch({type:"UPDATE_SKILLS",new_skills:fakeSkills})
+  })
+  // update state with new username
   store.dispatch({type:"UPDATE_USERNAME",new_username:new_username});
 }
 
