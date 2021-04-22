@@ -20,7 +20,6 @@
 .App-link {
   color: #09d3ac;
 }
-
 /* holds login fields */
 #login-div {
   height:400px;
@@ -30,7 +29,6 @@
   padding: 10px;
   box-shadow: 5px 10px 10px #888888;
 }
-
 /* submit login information */
 #login-button {
   border-radius:5px;
@@ -44,14 +42,12 @@
 #login-button:hover {
   background-color:#5E6E7D;
 }
-
 /* username or password field */
 .login-field {
   border-radius:none;
   width:55%;
   height:30px;
 }
-
 /* display on side of login box the logo */
 #login-logo {
   height:100%;
@@ -59,23 +55,23 @@
   float:left;
   background-color:#5C6F7D;
 }
-
+/* form contains username and password fields */
 #login-form {
   height:100%;
   background-color:#43505B;
   width:65%;
   float:right;
 }
-
+/* noinc image on login page */
 #login-img {
   width:50%;
 }
-
+/* navbar container */
 #navbar {
   height:65px;
   background-color:#43505B;
 }
-
+/* link on navbar */
 .nav-item {
   padding:25px;
   margin:15px;
@@ -94,28 +90,97 @@
   text-decoration:underline 5px #ED8643;
   color:white;
 }
-
+/* logo on left side of navbar */
 #nav-logo {
   height:65px;
   float:left;
 }
-
+/* welcome, user message on navbar */
 #nav-welcome {
   padding-right:35px;
   float:right;
   font-weight:bold;
   color:white;
 }
-
+/* divider between links on navbar */
 .nav-divider {
   color:white;
 }
-
+/* entire homepage */
 #homepage {
   padding:50px;
 }
-
+/* welcome, user on homepage */
 #home-welcome {
   text-align:left;
   font-weight:300;
+}
+/* show featured interests and skills */
+#featured-text {
+  text-align:left;
+  font-weight:300;
+}
+/* container of cards */
+#card-div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+/* card item that container skills and interests */
+#card {
+  width: 375px;
+  height: 225px;
+  box-shadow: 5px 10px 10px #888888;
+  flex-basis:auto;
+  margin:20px;
+  background-color:#F4F9FD;
+  text-align:left;
+}
+#card:hover {
+  border:10px solid #ED8643;
+  transition:.5s;
+}
+/* name on card */
+#card-name {
+  color:#ED8643;
+  padding-left:25px;
+  padding-top:25px;
+  margin-bottom:0px
+}
+/* details on cards */
+#card-details {
+  padding-left:25px;
+  padding-top:25px;
+  font-weight:300;
+  font-size:20px;
+}
+/* types of interests and skills */
+#Sport {
+  background-color:steelblue;
+  padding:5px;
+  color:white;
+}
+#Game {
+  background-color:darkred;
+  padding:5px;
+  color:white;
+}
+#Essential {
+  background-color:green;
+  padding:5px;
+  color:white;
+}
+#Practical {
+  background-color:goldenrod;
+  padding:5px;
+  color:white;
+}
+#Professional {
+  background-color:darkmagenta;
+  padding:5px;
+  color:white;
+}
+/* interests and skills pages */
+#skills-div,#interests-div {
+  padding:50px;
 }

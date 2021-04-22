@@ -36,6 +36,13 @@ export const fakeInterests = [
         type: 'Sport',
         current: true,
         detail: 'Horseback Riding is an ancient sport'
+    },
+    {
+        id: 6,
+        name: 'Postcrossing',
+        type: 'Game',
+        current: true,
+        detail: 'Postcrossing is fun'
     }
 ];
 
@@ -74,6 +81,13 @@ export const fakeSkills = [
         type: 'Professional',
         DateLearned: moment().subtract(Age, 'years').add(24, 'years').format(),
         detail: 'Coding is profitable'
+    },
+    {
+        id: 6,
+        name: 'Telling Time',
+        type: 'Essential',
+        DateLearned: moment().subtract(Age, 'years').add(4, 'years').format(),
+        detail: 'I need to know what time it is'
     }
 ];
 

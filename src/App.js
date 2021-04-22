@@ -8,6 +8,8 @@ import {fakeInterests, fakeSkills} from "./dummy-data";
 import Login from './Components/login.js';
 import Navbar from './Components/navbar.js';
 import Home from './Components/home.js';
+import Interests from './Components/interests.js';
+import Skills from './Components/skills.js';
 
 // initialize the store
 const store = createStore(reducer)
@@ -30,9 +32,11 @@ function App() {
           </Route>
           <Route path="/interests">
             <Navbar deleteUsername={deleteUsername} store={store} history={history}/>
+            <Interests store={store}/>
           </Route>
           <Route path="/skills">
             <Navbar deleteUsername={deleteUsername} store={store} history={history}/>
+            <Skills store={store}/>
           </Route>
         </Switch>
     </div>

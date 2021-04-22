@@ -52,7 +52,8 @@ function onSubmit(event,props) {
     // if username and password are valid, redirect to homepage
     if (validPassword && validUsername) {
         props.updateUsername(username);
-        props.history.push("/home");
+        // set timeout so theres time to load interests and skills before redirecting
+        setTimeout(function(){props.history.push("/home");},250);
     }
 }
 
