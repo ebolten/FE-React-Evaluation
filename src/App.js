@@ -10,6 +10,8 @@ import Navbar from './Components/navbar.js';
 import Home from './Components/home.js';
 import Interests from './Components/interests.js';
 import Skills from './Components/skills.js';
+import InterestDeatil from './Components/interest_detail.js';
+import SkillDeatil from './Components/skill_detail.js';
 
 // initialize the store
 const store = createStore(reducer)
@@ -28,15 +30,23 @@ function App() {
           </Route>
           <Route exact path="/home">
             <Navbar deleteUsername={deleteUsername} store={store} history={history}/>
-            <Home store={store}/>
+            <Home store={store} history={history}/>
           </Route>
-          <Route path="/interests">
+          <Route exact path="/interests">
             <Navbar deleteUsername={deleteUsername} store={store} history={history}/>
-            <Interests store={store}/>
+            <Interests store={store} history={history}/>
           </Route>
-          <Route path="/skills">
+          <Route exact path="/skills">
             <Navbar deleteUsername={deleteUsername} store={store} history={history}/>
-            <Skills store={store}/>
+            <Skills store={store} history={history}/>
+          </Route>
+          <Route path="/interests/">
+            <Navbar deleteUsername={deleteUsername} store={store} history={history}/>
+            <InterestDeatil store={store} history={history}/>
+          </Route>
+          <Route path="/skills/">
+            <Navbar deleteUsername={deleteUsername} store={store} history={history}/>
+            <SkillDeatil store={store} history={history}/>
           </Route>
         </Switch>
     </div>

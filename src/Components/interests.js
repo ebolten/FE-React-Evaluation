@@ -7,7 +7,7 @@ function Interests(props) {
             <h1 id="home-welcome">Interests</h1>
             <div id="card-div">
                 {props.store.getState().interests.interests.map((interest)=>(
-                    <Card item={interest} />
+                    <Card key={interest.id} item={interest} history={props.history} type={"interests"}/>
                 ))}
             </div>
         </div>

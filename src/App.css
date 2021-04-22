@@ -135,6 +135,7 @@
   margin:20px;
   background-color:#F4F9FD;
   text-align:left;
+  cursor:pointer;
 }
 #card:hover {
   border:10px solid #ED8643;
