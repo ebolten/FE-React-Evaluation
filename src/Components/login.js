@@ -1,16 +1,22 @@
 import React from 'react';
 import Logo from '../Images/noinc-logo.png';
 
+// variables containing whether username or password is valid
+let validPassword = false;
+let validUsername = false;
+
 // component for login page and functionality
 function Login(props) {
     return(
         <div>
             <br/><br/><br/><br/><br/><br/>
             <div id="login-div">
+                {/* login image */}
                 <div id="login-logo">
                     <br/><br/><br/><br/><br/><br/><br/><br/><br/>
                     <img alt="login-logo" id="login-img" src={Logo}/>
                 </div>
+                {/* username and password fields */}
                 <div id="login-form">
                     <br/><br/><br/><br/>
                     <form>
@@ -30,8 +36,24 @@ function Login(props) {
 function onSubmit(event,props) {
     event.preventDefault();
     let username = document.getElementById('username').value;
-    props.updateUsername(username);
-    props.history.push("/home");
+    let password = document.getElementById('password').value;
+    // check if username is valid
+    if (username.length < 1) {
+        alert("Invalid Username")
+    } else {
+        validUsername = true;
+    }
+    // check if password is valid
+    if (password.length < 5) {
+        alert("Password Must Contain at Least 5 Characters")
+    } else {
+        validPassword = true;
+    }
+    // if username and password are valid, redirect to homepage
+    if (validPassword && validUsername) {
+        props.updateUsername(username);
+        props.history.push("/home");
+    }
 }
 
 export default Login;
