@@ -20,3 +20,53 @@
 .App-link {
   color: #09d3ac;
 }
+
+/* holds login fields */
+#login-div {
+  height:400px;
+  margin: auto;
+  width: 75%;
+  padding: 10px;
+  padding: 10px;
+  box-shadow: 5px 10px 10px #888888;
+}
+
+/* submit login information */
+#login-button {
+  border-radius:5px;
+  width:56.5%;
+  background-color:#ED8643;
+  color:white;
+  font-size:125%;
+  padding:15px;
+  border:none;
+}
+#login-button:hover {
+  background-color:#5E6E7D;
+}
+
+/* username or password field */
+.login-field {
+  border-radius:none;
+  width:55%;
+  height:30px;
+}
+
+/* display on side of login box the logo */
+#login-logo {
+  height:100%;
+  width:35%;
+  float:left;
+  background-color:#5C6F7D;
+}
+
+#login-form {
+  height:100%;
+  background-color:#43505B;
+  width:65%;
+  float:right;
+}
+
+#login-img {
+  width:50%;
+}
