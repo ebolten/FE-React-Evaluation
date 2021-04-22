@@ -130,6 +130,7 @@
 #card {
   width: 375px;
   height: 225px;
+  border:10px solid white;
   box-shadow: 5px 10px 10px #888888;
   flex-basis:auto;
   margin:20px;
