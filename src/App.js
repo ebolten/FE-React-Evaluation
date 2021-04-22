@@ -25,8 +25,14 @@ function App() {
             <Login updateUsername={updateUsername} history={history}/>
           </Route>
           <Route exact path="/home">
-            <Navbar store={store}/>
+            <Navbar store={store} history={history}/>
             <Home store={store}/>
+          </Route>
+          <Route path="/interests">
+            <Navbar store={store} history={history}/>
+          </Route>
+          <Route path="/skills">
+            <Navbar store={store} history={history}/>
           </Route>
         </Switch>
     </div>

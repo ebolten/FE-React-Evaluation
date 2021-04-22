@@ -70,3 +70,51 @@
 #login-img {
   width:50%;
 }
+
+#navbar {
+  height:65px;
+  background-color:#43505B;
+}
+
+.nav-item {
+  padding:25px;
+  margin:15px;
+  text-decoration:none;
+  color:white;
+}
+.nav-item:hover {
+  transition:.5s;
+  color:#ED8643;
+  text-decoration:none;
+}
+.nav-item-active {
+  padding:25px;
+  margin:15px;
+  text-decoration:underline 5px #ED8643;
+  color:white;
+}
+
+#nav-logo {
+  height:65px;
+  float:left;
+}
+
+#nav-welcome {
+  padding-right:35px;
+  float:right;
+  font-weight:bold;
+  color:white;
+}
+
+.nav-divider {
+  color:white;
+}
+
+#homepage {
+  padding:50px;
+}
+
+#home-welcome {
+  text-align:left;
+  font-weight:300;
+}
