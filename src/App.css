@@ -115,6 +115,12 @@
   text-align:left;
   font-weight:300;
 }
+/* interest name on interest or skill page */
+#detail-welcome {
+  text-align:left;
+  font-weight:300;
+  font-size:50px;
+}
 /* show featured interests and skills */
 #featured-text {
   text-align:left;
@@ -131,7 +137,7 @@
   width: 375px;
   height: 225px;
   border:10px solid white;
-  box-shadow: 5px 10px 10px #888888;
+  box-shadow: 0 0 5px 2px #888888;
   flex-basis:auto;
   margin:20px;
   background-color:#F4F9FD;
@@ -147,7 +153,8 @@
   color:#ED8643;
   padding-left:25px;
   padding-top:25px;
-  margin-bottom:0px
+  margin-bottom:0px;
+  margin-top:0px;
 }
 /* details on cards */
 #card-details {
@@ -155,6 +162,11 @@
   padding-top:25px;
   font-weight:300;
   font-size:20px;
+}
+/* details on specific skills and interests */
+#item-details {
+  text-align:left;
+  font-weight:lighter;
 }
 /* types of interests and skills */
 #Sport {

@@ -12,9 +12,9 @@ function Navbar(props) {
             <span className="nav-divider">|</span>
             {props.history.location.pathname === "/home" ? <span className="nav-item-active" href="/home">Home</span> : <span onClick={()=>addHistory(props.history,"/home")} className="nav-item" href="/home">Home</span>}
             <span className="nav-divider">|</span>
-            {props.history.location.pathname === "/interests" ? <span className="nav-item-active" href="/interests">Interests</span> : <span onClick={()=>addHistory(props.history,"/interests")} className="nav-item" href="/interests">Interests</span>}
+            {props.history.location.pathname.includes("/interests") ? <span className="nav-item-active" href="/interests">Interests</span> : <span onClick={()=>addHistory(props.history,"/interests")} className="nav-item" href="/interests">Interests</span>}
             <span className="nav-divider">|</span>
-            {props.history.location.pathname === "/skills" ? <span className="nav-item-active" href="/skills">Skills</span> : <span onClick={()=>addHistory(props.history,"/skills")} className="nav-item" href="/skills">Skills</span>}
+            {props.history.location.pathname.includes("/skills") ? <span className="nav-item-active" href="/skills">Skills</span> : <span onClick={()=>addHistory(props.history,"/skills")} className="nav-item" href="/skills">Skills</span>}
             <span className="nav-divider">|</span>
             <a className="nav-item" href="/">Logout</a>
             <span className="nav-divider">|</span>

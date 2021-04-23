@@ -6,7 +6,12 @@ function InterestDeatil(props) {
 
     return(
         <div id="interest-details">
-            <h1 id="home-welcome">{currentItem.name}</h1>
+            <h1 id="detail-welcome">{currentItem.name}</h1>
+            <div id="item-details">
+                <h3><span id={currentItem.type}>{currentItem.type}</span></h3>
+                <br/><br/>
+                <h3 style={{fontWeight:'200'}}>{currentItem.detail}</h3>
+            </div>
         </div>
     )
 }

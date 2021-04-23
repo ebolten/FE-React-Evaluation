@@ -5,7 +5,7 @@ function Card(props) {
         <div>
             <div id="card" onClick={()=>redirectCard(props.item.id,props.history,props.type)}>
                 {/* show skills or interest card */}
-                <h1 id="card-name">{props.item.name}</h1>
+                <h2 id="card-name">{props.item.name}</h2>
                 <div id="card-details">
                     <span>Type: <span id={props.item.type}>{props.item.type}</span></span>
                     <br/><br/>
