@@ -19,14 +19,11 @@ const store = createStore(reducer)
 // main app component
 function App() {
     const history = useHistory();
-    console.log(store.getState())
-    console.log('test return', fakeInterests);
-    console.log('test return', fakeSkills);
   return (
     <div className="App">
         <Switch>
           <Route exact path='/'>
-            <Login updateUsername={updateUsername} history={history}/>
+            <Login submitLogin={submitLogin} updateUsername={updateUsername} history={history}/>
           </Route>
           <Route exact path="/home">
             <Navbar deleteUsername={deleteUsername} store={store} history={history}/>
@@ -70,6 +67,33 @@ function updateUsername(new_username) {
 // delete username (for logout)
 function deleteUsername() {
   store.dispatch({type:"UPDATE_USERNAME",new_username:""});
+}
+
+// submit login functionality
+function submitLogin(event,history) {
+  event.preventDefault();
+  let validPassword = false;
+  let validUsername = false;
+  let username = event.target.username.value;
+  let password = event.target.password.value;
+  // check if username is valid
+  if (username.length < 5) {
+      alert("Username Must Contain at Least 5 Characters")
+  } else {
+      validUsername = true;
+  }
+  // check if password is valid
+  if (password.length < 5) {
+      alert("Password Must Contain at Least 5 Characters")
+  } else {
+      validPassword = true;
+  }
+  // if username and password are valid, redirect to homepage
+  if (validPassword && validUsername) {
+      updateUsername(username);
+      // set timeout so theres time to load interests and skills before redirecting
+      setTimeout(function(){history.push("/home");},250);
+  }
 }
 
 export default App;
