@@ -69,6 +69,7 @@
 /* navbar container */
 #navbar {
   height:65px;
+  width:100%;
   background-color:#43505B;
 }
 /* link on navbar */
@@ -77,6 +78,12 @@
   margin:15px;
   text-decoration:none;
   color:white;
+}
+.nav-item-small {
+  padding:25px;
+  margin:15px;
+  text-decoration:none;
+  color:black;
 }
 .nav-item:hover {
   transition:.5s;
@@ -192,5 +199,49 @@
 #Professional {
   background-color:darkmagenta;
   padding:5px;
+  color:white;
+}
+/* container holding dropdown menu */
+#dropdown-container {
+  position: relative;
+  float:right;
+  padding-right:25px;
+}
+/* button to toggle dropdown */
+#dropdown-btn {
+  width: 50px;
+  border:none;
+  margin-top:10px;
+  background-color:#ED8643;
+  color:white;
+  cursor: pointer;
+  font-size: 25px;
+}
+/* dropdown menu/dropdown menu items */
+#dropdown {
+  position: absolute;
+  top: 100%;
+  left: -130%;
+  width: 150px;
+  z-index: 2;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14);
+}
+/* list in dropdown menu */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  background-color:white;
+  padding: 8px 12px;
+  text-align:left;
+}
+/* welcome, user message on navbar for small screens */
+#nav-welcome-small {
+  padding-left:35px;
+  text-align:center;
+  font-weight:bold;
   color:white;
 }
