@@ -85,7 +85,7 @@ function submitLogin(event,history) {
       validUsername = true;
   }
   // check if password is valid
-  if (password.length < 8 || password.search(/[A-Z]/) < 1) {
+  if (password.length < 8 || password.search(/[A-Z]/) < 0) {
       alert("Password Must Contain at Least 8 Characters and 1 Uppercase Letter")
   } else {
       validPassword = true;
