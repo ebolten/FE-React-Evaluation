@@ -19,7 +19,7 @@ function DropdownNav(props) {
                         <li><span onClick={()=>props.addHistory(props.history,"/home")} className="nav-item-small" href="/home">Home</span></li>
                         <li><span onClick={()=>props.addHistory(props.history,"/interests")} className="nav-item-small" href="/interests">Interests</span></li>
                         <li><span onClick={()=>props.addHistory(props.history,"/skills")} className="nav-item-small" href="/skills">Skills</span></li>
-                        <li><a className="nav-item-small" href="/">Logout</a></li>
+                        <li><a style={{textDecoration:'none'}} className="nav-item-small" href="/">Logout</a></li>
                     </ul>
                 </div>
             </div>

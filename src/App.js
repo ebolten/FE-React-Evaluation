@@ -79,14 +79,14 @@ function submitLogin(event,history) {
   let username = event.target.username.value;
   let password = event.target.password.value;
   // check if username is valid
-  if (username.length < 5) {
-      alert("Username Must Contain at Least 5 Characters")
+  if (!(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(username.toLowerCase()))) {
+      alert("Invalid Email for Username Field")
   } else {
       validUsername = true;
   }
   // check if password is valid
-  if (password.length < 5) {
-      alert("Password Must Contain at Least 5 Characters")
+  if (password.length < 8 || password.search(/[A-Z]/) < 1) {
+      alert("Password Must Contain at Least 8 Characters and 1 Uppercase Letter")
   } else {
       validPassword = true;
   }

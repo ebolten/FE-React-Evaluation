@@ -9,7 +9,7 @@ function Navbar(props) {
             {props.store.getState().user.userName === "" ? props.history.push("/") : ""}
             <img id="nav-logo" alt="logo" src={Logo} />
             {/* for larger screens */}
-            <div className="visible-lg visible-md">
+            <div className="hidden-sm hidden-xs hidden-md">
                 <div>
                     <br/>
                     <div>
@@ -23,18 +23,17 @@ function Navbar(props) {
                         <span className="nav-divider">|</span>
                         <a className="nav-item" href="/">Logout</a>
                         <span className="nav-divider">|</span>
+                        {/* welcome message */}
+                        <span id="nav-welcome"><i className="fa fa-user"></i>&nbsp;Welcome, {props.store.getState().user.userName}</span>
                     </div>
                 </div>
-                {/* welcome message */}
-                <span id="nav-welcome"><i className="fa fa-user"></i>&nbsp;Welcome, {props.store.getState().user.userName}</span>
             </div>
-
-            <div className="visible-sm visible-xs">
+            {/* visible on smaller screens */}
+            <div className="visible-sm visible-xs visible-md">
                 <DropdownNav style={{float:'right'}} addHistory={props.addHistory} history={props.history}/>
                 <br/>
                 <span className="hidden-xs" style={{float:'left'}} id="nav-welcome-small"><i className="fa fa-user"></i>&nbsp;Welcome, {props.store.getState().user.userName}</span>
             </div>
-    
         </div>
     )
 }

@@ -78,9 +78,11 @@
   margin:15px;
   text-decoration:none;
   color:white;
+  cursor:pointer;
 }
 .nav-item-small {
   padding:25px;
+  cursor:pointer;
   margin:15px;
   text-decoration:none;
   color:black;
@@ -122,6 +124,12 @@
   text-align:left;
   font-weight:300;
 }
+/* welcome, user on homepage on small screens */
+#home-welcome-sm {
+  text-align:left;
+  font-weight:300;
+  font-size:25px;
+}
 /* interest name on interest or skill page */
 #detail-welcome {
   text-align:left;
@@ -142,6 +150,18 @@
 /* card item that container skills and interests */
 #card {
   width: 375px;
+  height: 225px;
+  border:10px solid white;
+  box-shadow: 0 0 5px 2px #888888;
+  flex-basis:auto;
+  margin:20px;
+  background-color:#F4F9FD;
+  text-align:left;
+  cursor:pointer;
+}
+/* card item that container skills and interests */
+#card-sm {
+  width: 250px;
   height: 225px;
   border:10px solid white;
   box-shadow: 0 0 5px 2px #888888;

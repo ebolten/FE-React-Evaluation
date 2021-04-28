@@ -4,7 +4,8 @@ import Card from './card.js';
 function Home(props) {
     return(
         <div id='homepage'>
-            <h1 id="home-welcome">Welcome, {props.store.getState().user.userName}!</h1>
+            <h1 className="hidden-xs" id="home-welcome">Welcome, {props.store.getState().user.userName}!</h1>
+            <h1 className="visible-xs" id="home-welcome-sm">Welcome, {props.store.getState().user.userName}!</h1>
             {/* show first 3 interests */}
             <br/>
             <h2 id="featured-text">Featured Interests</h2>
